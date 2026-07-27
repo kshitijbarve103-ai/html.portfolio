@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kshitij Barve — Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --bg-soft:#F6F8FB;
+    --text:#1F2937;
+    --text-soft:#6B7280;
+    --border:#E5E7EB;
+    --primary:#2563EB;
+    --primary-soft:#EFF4FF;
+  }
+ 
+  body{
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+  }
+ 
+  h1, h2, h3, .display-font{
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+  }
+ 
+  /* Navbar */
+  .navbar{
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .navbar-brand{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--text) !important;
+  }
+  .nav-link{
+    color: var(--text-soft) !important;
+    font-weight: 500;
+  }
+  .nav-link:hover{ color: var(--primary) !important; }
+ 
+  /* Hero */
+  .hero{
+    padding: 6rem 0 4rem 0;
+    background-color: var(--bg-soft);
+  }
+  .hero .badge-open{
+    display:inline-block;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-weight: 500;
+    font-size: .85rem;
+    padding: .4rem .9rem;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+  }
+  .hero h1{
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .hero .role{
+    color: var(--text-soft);
+    font-size: 1.1rem;
+    max-width: 42ch;
+  }
+ 
+  section{ padding: 4rem 0; }
+  .section-label{
+    color: var(--primary);
+    font-weight: 600;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    margin-bottom: .5rem;
+  }
+ 
+  /* Skill chips */
+  .skill-chip{
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .9rem;
+    margin-bottom: .7rem;
+  }
+  .skill-chip .status{
+    font-size: .7rem;
+    font-weight: 600;
+    padding: .2rem .6rem;
+    border-radius: 20px;
+  }
+  .status-strong{ background:#E7F6EC; color:#1E8A4C; }
+  .status-learning{ background:#FFF3E0; color:#C2760C; }
+ 
+  /* Cards */
+  .build-card{
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.6rem;
+    height: 100%;
+    transition: box-shadow .15s ease, transform .15s ease;
+  }
+  .build-card:hover{
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transform: translateY(-3px);
+  }
+  .build-card .tag{
+    display:inline-block;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-size: .75rem;
+    font-weight: 500;
+    padding: .25rem .6rem;
+    border-radius: 6px;
+    margin-bottom: .8rem;
+  }
+ 
+  /* Contact */
+  .contact-panel{
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+  }
+  .contact-panel a.btn-primary{
+    background: var(--primary);
+    border: none;
+    font-weight: 600;
+    padding: .6rem 1.6rem;
+  }
+  .contact-links{
+    display:flex;
+    justify-content:center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+  }
+  .contact-links a{
+    color: var(--text-soft);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .contact-links a:hover{ color: var(--primary); }
+ 
+  footer{
+    font-size: .85rem;
+    color: var(--text-soft);
+    padding: 2rem 0;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+ 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#top">Kshitij Barve</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav gap-lg-4">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
+<!-- Hero -->
+<header class="hero" id="top" style="padding-top:8rem;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <span class="badge-open">Open to Internships</span>
+        <h1>Hi, I'm Kshitij 👋<br>A student learning full stack web development.</h1>
+        <p class="role mt-3">BTech student, comfortable with HTML, CSS and JavaScript, and currently learning backend development with Node.js.</p>
+        <div class="mt-4">
+          <a href="#projects" class="btn btn-primary rounded-2 px-4 py-2 me-2">View Work</a>
+          <a href="#contact" class="btn btn-outline-secondary rounded-2 px-4 py-2">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="section-label">About</div>
+        <h2 class="mb-4">A bit about me</h2>
+      </div>
+      <div class="col-lg-8">
+        <p style="color:var(--text-soft); font-size:1.05rem;">
+          I'm a BTech student building my way into full stack web development. My frontend basics —
+          HTML, CSS and JavaScript — are solid, and right now I'm learning backend development
+          with Node.js so I can build complete web applications on my own.
+        </p>
+        <p style="color:var(--text-soft); font-size:1.05rem;">
+          I'm still early in my journey, but I enjoy the process of building things step by step
+          and learning by actually creating projects rather than just watching tutorials.
+        </p>
+        <p style="color:var(--text-soft); font-size:1.05rem;">
+          When I'm not coding, I'm usually figuring out why my CSS isn't centering something
+          the way I expect it to (we've all been there).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Skills -->
+<section id="skills" style="background-color:var(--bg-soft);">
+  <div class="container">
+    <div class="section-label">Skills</div>
+    <h2 class="mb-4">What I'm working with</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="skill-chip"><span>HTML</span><span class="status status-strong">Comfortable</span></div>
+        <div class="skill-chip"><span>CSS</span><span class="status status-strong">Comfortable</span></div>
+        <div class="skill-chip"><span>JavaScript</span><span class="status status-strong">Comfortable</span></div>
+      </div>
+      <div class="col-md-6">
+        <div class="skill-chip"><span>Bootstrap</span><span class="status status-strong">Comfortable</span></div>
+        <div class="skill-chip"><span>Node.js</span><span class="status status-learning">Learning</span></div>
+        <div class="skill-chip"><span>MongoDB &amp; Express</span><span class="status status-learning">Learning</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Projects -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">Projects</div>
+    <h2 class="mb-4">Things I've built</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="build-card">
+          <span class="tag">HTML · CSS · Bootstrap</span>
+          <h5>Personal Portfolio Website</h5>
+          <p style="color:var(--text-soft); font-size:.95rem;">This website — built from scratch to showcase my skills and learning journey as a developer.</p>
+          <a href="#" style="color:var(--primary); font-weight:500; text-decoration:none;">View project →</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="build-card">
+          <span class="tag">Node.js · MongoDB</span>
+          <h5>Coming soon</h5>
+          <p style="color:var(--text-soft); font-size:.95rem;">Working on my first full stack project with a backend. Will be added here once it's ready.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-panel">
+      <div class="section-label">Contact</div>
+      <h2 class="mb-2">Say hi</h2>
+      <p style="color:var(--text-soft); max-width:50ch; margin:0 auto;">Looking for an internship where I can learn from people who know more than me. Reach out if you've got something in mind, or even just advice.</p>
+      <a href="mailto:kshitijbarve103@gmail.com" class="btn btn-primary rounded-2 mt-3">Say Hello</a>
+      <div class="contact-links">
+        <a href="mailto:kshitijbarve103@gmail.com">kshitijbarve103@gmail.com</a>
+        <a href="https://www.linkedin.com/in/kshitij-barve">LinkedIn</a>
+        <a href="https://github.com/kshitijbarve103-ai">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<footer>
+  © 2026 Kshitij Barve — Built with HTML, CSS &amp; Bootstrap.
+</footer>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
